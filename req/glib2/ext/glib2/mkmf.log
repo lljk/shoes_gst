@@ -1,0 +1,358 @@
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I.  -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I.  -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: #ifndef __GNUC__
+5: # error
+6: >>>>>> __GNUC__ undefined <<<<<<
+7: #endif
+/* end */
+
+have_func: checking for rb_define_alloc_func() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_define_alloc_func; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_block_proc() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic     -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_block_proc; return 0; }
+/* end */
+
+--------------------
+
+"gcc -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall   -c conftest.c"
+conftest.c:4:18: error: node.h: No such file or directory
+conftest.c:5: error: ‘NODE_ATTRASGN’ undeclared here (not in a function)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include "ruby.h"
+4: #include "node.h"
+5: int node_attrasgn = (int)NODE_ATTRASGN;
+/* end */
+
+setup_win32: checking for Win32 OS... -------------------- no
+
+--------------------
+
+have_package: checking for gobject-2.0... -------------------- yes
+
+--------------------
+
+have_package: checking for gthread-2.0... -------------------- yes
+
+--------------------
+
+have_header: checking for unistd.h... -------------------- yes
+
+"gcc -E -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <unistd.h>
+/* end */
+
+--------------------
+
+have_header: checking for io.h... -------------------- no
+
+"gcc -E -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread  conftest.c -o conftest.i"
+conftest.c:3:16: error: io.h: No such file or directory
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <io.h>
+/* end */
+
+--------------------
+
+have_func: checking for g_spawn_close_pid() in glib.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <glib.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))g_spawn_close_pid; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for g_thread_init() in glib.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <glib.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))g_thread_init; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for g_main_depth() in glib.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <glib.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))g_main_depth; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for g_listenv() in glib.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <glib.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))g_listenv; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_check_array_type() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_check_array_type; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_exec_recursive() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_exec_recursive; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_errinfo() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_errinfo; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_sourcefile() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_sourcefile; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_sourceline() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_sourceline; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ruby_set_current_source() in ruby.h... -------------------- no
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:7: error: ‘ruby_set_current_source’ undeclared (first use in this function)
+conftest.c:7: error: (Each undeclared identifier is reported only once
+conftest.c:7: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))ruby_set_current_source; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:7: warning: implicit declaration of function ‘ruby_set_current_source’
+/tmp/ccTjaGH7.o: In function `t':
+/home/jk/shoes2/req/glib2/ext/glib2/conftest.c:7: undefined reference to `ruby_set_current_source'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { ruby_set_current_source(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for ruby_native_thread_p() in ruby.h... -------------------- yes
+
+"gcc -o conftest -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread conftest.c  -L. -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -Wl,-R/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L.  -rdynamic -Wl,-export-dynamic -pthread -pthread     -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -Wl,-R -Wl,/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -L/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib -lruby-static  -lgobject-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lgthread-2.0 -lrt -lglib-2.0 -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: 
+5: /*top*/
+6: int main() {return 0;}
+7: int t() { void ((*volatile p)()); p = (void ((*)()))ruby_native_thread_p; return 0; }
+/* end */
+
+--------------------
+
+have_var: checking for curr_thread in ruby.h,node.h... -------------------- no
+
+"gcc -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread   -c conftest.c"
+conftest.c:4:18: error: node.h: No such file or directory
+conftest.c: In function ‘t’:
+conftest.c:8: error: ‘curr_thread’ undeclared (first use in this function)
+conftest.c:8: error: (Each undeclared identifier is reported only once
+conftest.c:8: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: #include <node.h>
+5: 
+6: /*top*/
+7: int main() {return 0;}
+8: int t() { const volatile void *volatile p; p = &(&curr_thread)[0]; return 0; }
+/* end */
+
+--------------------
+
+have_var: checking for rb_curr_thread in ruby.h,node.h... -------------------- no
+
+"gcc -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/i686-linux -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1/ruby/backward -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/include/ruby-1.9.1 -I. -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/site_ruby/1.9.1/i686-linux  -I/home/jk/.rvm/rubies/ruby-1.9.1-p378/lib/ruby/vendor_ruby/1.9.1/i686-linux   -D_FILE_OFFSET_BITS=64   -O2 -g -Wall -Wno-parentheses  -fPIC -Wall -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -pthread   -c conftest.c"
+conftest.c:4:18: error: node.h: No such file or directory
+conftest.c: In function ‘t’:
+conftest.c:8: error: ‘rb_curr_thread’ undeclared (first use in this function)
+conftest.c:8: error: (Each undeclared identifier is reported only once
+conftest.c:8: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby.h>
+4: #include <node.h>
+5: 
+6: /*top*/
+7: int main() {return 0;}
+8: int t() { const volatile void *volatile p; p = &(&rb_curr_thread)[0]; return 0; }
+/* end */
+
+--------------------
+

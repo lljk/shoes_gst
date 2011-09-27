@@ -1,0 +1,3 @@
+Name: Ruby/GStreamer
+Description: Ruby bindings for Streaming media framework
+Version: 0.90.8

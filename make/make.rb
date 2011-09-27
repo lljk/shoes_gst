@@ -60,11 +60,11 @@ module Make
     %w[req/ftsearch/lib/* req/rake/lib/*].each do |rdir|
       FileList[rdir].each { |rlib| cp_r rlib, "dist/ruby/lib" }
     end
-    %w[req/binject/ext/binject_c req/ftsearch/ext/ftsearchrt req/bloopsaphone/ext/bloops req/chipmunk/ext/chipmunk].
+    %w[req/glib2/ext/glib2 req/gstreamer/ext/gstreamer req/binject/ext/binject_c req/ftsearch/ext/ftsearchrt req/bloopsaphone/ext/bloops req/chipmunk/ext/chipmunk].
       each { |xdir| copy_ext xdir, "dist/ruby/lib/#{RUBY_PLATFORM}" }
 
     gdir = "dist/ruby/gems/#{RUBY_V}"
-    {'hpricot' => 'lib', 'json' => 'lib/json/ext', 'sqlite3' => 'lib'}.each do |gemn, xdir|
+    {'glib2' => 'lib/glib2/ext', 'gstreamer' => 'lib/gstreamer/ext', 'hpricot' => 'lib', 'json' => 'lib/json/ext', 'sqlite3' => 'lib'}.each do |gemn, xdir|
       spec = eval(File.read("req/#{gemn}/gemspec"))
       mkdir_p "#{gdir}/specifications"
       mkdir_p "#{gdir}/gems/#{spec.full_name}/lib"
